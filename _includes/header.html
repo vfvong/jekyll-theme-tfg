@@ -5,9 +5,18 @@
         <img class="w3 w2-l h3 h2-l br-100 ba border-color" src="{{ site.avatar | relative_url }}" alt="avatar">
       </a>
     {% endif %}
-    <h1 class="baskerville f2 mt2 mt0-l mb0 body-color-dark dib-l v-mid-l">
-      <a class="color-inherit no-underline" href="{{ '/' | relative_url }}" title="Home">{{ site.title }}</a>
+    <h1 class="baskerville f2 mt2 mt0-l mb0 dib-l v-mid-l">
+      <a class="body-color-dark no-underline" href="{{ '/' | relative_url }}" title="Home">{{ site.title }}</a>
     </h1>
     <h2 class="f6 mt2 body-color-light dn-l">{{ site.tagline }}</h2>
   </div>
+  {% if site.data.navigation %}
+    <div class="dtc-l tr-l mt4 fw5">
+      {% for item in site.data.navigation %}
+        <a class="pa1 body-color-dark no-underline hover-line-through {% if page.url == item.url %}line-through{% endif %}" href="{{ item.url | relative_url }}">
+          {{ item.title }}
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
 </header>

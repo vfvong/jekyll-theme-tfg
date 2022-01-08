@@ -1,0 +1,10 @@
+.line-through {
+  text-decoration: line-through;
+}
+
+.hover-line-through {
+  &:hover,
+  &:focus {
+    text-decoration: line-through;
+  }
+}
