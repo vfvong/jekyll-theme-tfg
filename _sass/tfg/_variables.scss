@@ -4,7 +4,7 @@
   --body-color-l: #999;
   --body-color-d: #000;
   --accent-color: #FF6300;
-  --border-color: rgba(0,0,0,.3);
+  --border-color: rgba(0,0,0,.2);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +13,6 @@
     --body-color:   #ccc;
     --body-color-d: #fff;
     --accent-color: #357EDD;
-    --border-color: rgba(255,255,255,.3);
+    --border-color: rgba(255,255,255,.2);
   }
 }
