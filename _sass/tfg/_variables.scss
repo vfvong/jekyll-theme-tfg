@@ -1,0 +1,18 @@
+:root {
+  --body-bg:      #fff;
+  --body-color:   #333;
+  --body-color-l: #999;
+  --body-color-d: #000;
+  --accent-color: #FF6300;
+  --border-color: rgba(0,0,0,.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --body-bg:      #111;
+    --body-color:   #ccc;
+    --body-color-d: #fff;
+    --accent-color: #357EDD;
+    --border-color: rgba(255,255,255,.3);
+  }
+}
