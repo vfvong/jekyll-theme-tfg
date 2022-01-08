@@ -13,7 +13,7 @@
   {% if site.data.navigation %}
     <div class="dtc-l tr-l mt4 fw5">
       {% for item in site.data.navigation %}
-        <a class="pa1 body-color-dark no-underline hover-line-through {% if page.url == item.url %}line-through{% endif %}" href="{{ item.url | relative_url }}">
+        <a class="v-mid-l pa1 body-color-dark no-underline hover-line-through {% if page.url == item.url %}line-through{% endif %}" href="{{ item.url | relative_url }}">
           {{ item.title }}
         </a>
       {% endfor %}
