@@ -1,0 +1,37 @@
+/**
+ * Some customized classes
+ */
+
+/* Text */
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.hover-line-through {
+  &:hover,
+  &:focus {
+    text-decoration: line-through;
+  }
+}
+
+.hover-no-decoration {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+/* Color */
+
+.border-color {
+  border-color: var(--border-color);
+}
+
+.body-color-light {
+  color: var(--body-color-light);
+}
+
+.body-color-dark {
+  color: var(--body-color-dark);
+}

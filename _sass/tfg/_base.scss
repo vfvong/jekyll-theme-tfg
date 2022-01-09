@@ -1,0 +1,18 @@
+/**
+ * Some base settings for common tags
+ */
+
+body {
+  color: var(--body-color);
+  background-color: var(--body-bg);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
