@@ -2,4 +2,26 @@
 layout: default
 ---
 
-{{ content }}
+<div class="measure-wide pa3 center lh-copy f5 f4-l">
+  {{ content }}
+
+  <section>
+    {% for post in site.posts %}
+        <article class="pa3 mv3 ba br4 border-color">
+          <h3 class="mt0 mb2">
+            <a href="{{ post.url | relative_url }}">
+              {{ post.title }}
+            </a>
+          </h3>
+          <p class="mv2">
+            {% if post.description %}
+              {{ post.description | strip_html }}
+            {% else %}
+              {{ post.excerpt | strip_html }}
+            {% endif %}
+          </p>
+          <time class="mb0 body-color-light f6 f5-l" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+        </article>
+    {% endfor %}
+  </section>
+</div>
