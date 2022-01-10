@@ -11,12 +11,12 @@
     <h2 class="f6 mt2 body-color-light dn-l">{{ site.tagline }}</h2>
   </div>
   {% if site.data.navigation %}
-    <div class="dtc-l tr-l mt4 fw5">
+    <nav class="dtc-l tr-l mt4 fw5">
       {% for item in site.data.navigation %}
         <a class="v-mid-l pa1 body-color-dark hover-line-through {% if page.url == item.url %}line-through{% endif %}" href="{{ item.url | relative_url }}">
           {{ item.title }}
         </a>
       {% endfor %}
-    </div>
+      </nav>
   {% endif %}
 </header>
