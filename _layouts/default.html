@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: 'en' }}">
   {% include head.html %}
-  <body>
+  <body class="flex flex-column min-vh-100">
     {% include header.html %}
     <main class="measure-wide pa3 center lh-copy f5 f4-l">
       {{ content }}
     </main>
+    {% include footer.html %}
   </body>
 </html>

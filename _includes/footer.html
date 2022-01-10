@@ -1,0 +1,22 @@
+<footer class="avenir tc tl-l pv4 ph3 ph4-l bt border-color f6 f5-l">
+  {% if site.data.social %}
+  <div class="f4 f3-l mb3">
+    {% for social in site.data.social %}
+      <a class="mr2 color-inherit no-underline hover-no-decoration hover-darken" href="{{ social.url }}" target="_blank">
+        <i class="{{ social.icon | default: 'fas fa-link' }}" title="{{ social.title }}"></i>
+      </a>
+    {% endfor %}
+  </div>
+  {% endif %}
+  <div class="dt-l w-100">
+    <p class="dtc-l tl-l">
+      &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>
+      {%- if site.author -%}
+        &nbsp;<a href="{{ site.author.url }}" target="_blank">{{ site.author.name }}</a>
+      {%- endif -%}. All rights reserved.
+    </p>
+    <p class="dtc-l tr-l mb0">
+      Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> & <a href="https://github.com/vfvong/jekyll-theme-tfg" target="_blank">TFG</a>
+    </p>
+  </div>
+</footer>
