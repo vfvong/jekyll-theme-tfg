@@ -25,3 +25,21 @@ layout: default
   </div>
   {{ content }}
 </article>
+
+<div class="dt w-100 mt4">
+  {% if page.previous %}
+    <a class="dtc tc tl-l w-50 pa3 ba br4 br--left border-color body-color-dark hover-no-decoration hover-bg" href="{{ page.previous.url | relative_url }}">
+      <i class="fas fa-chevron-left"></i> <span class="dn di-l">{{ page.previous.title | markdownify | strip_html }}</span>
+    </a>
+  {% else %}
+    <span class="dtc tc tl-l w-50 pa3 ba br4 br--left border-color body-color-light"><i class="fas fa-chevron-left"></i></span>
+  {% endif %}
+  
+  {% if page.next %}
+    <a class="dtc tc tr-l w-50 pa3 ba br4 br--right border-color body-color-dark hover-no-decoration hover-bg" href="{{ page.next.url | relative_url }}">
+      <span class="dn di-l">{{ page.next.title | markdownify | strip_html }}</span> <i class="fas fa-chevron-right"></i> 
+    </a>
+  {% else %}
+    <span class="dtc tc tr-l w-50 pa3 ba br4 br--right border-color body-color-light"><i class="fas fa-chevron-right"></i></span>
+  {% endif %}
+</div>

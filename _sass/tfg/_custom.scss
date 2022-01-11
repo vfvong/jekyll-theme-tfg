@@ -29,6 +29,13 @@
   }
 }
 
+.hover-bg {
+  &:hover,
+  &:focus {
+    background-color: var(--border-color);
+  }
+}
+
 /* Color */
 
 .border-color {

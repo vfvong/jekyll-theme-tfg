@@ -7,7 +7,11 @@ layout: default
 </section>
 
 <section>
-  {% for post in site.posts %}
+  {% assign posts = site.posts %}
+  {% if paginator %}
+    {% assign posts = paginator.posts %}
+  {% endif %}
+  {% for post in posts %}
     <article class="pa3 mv3 ba br4 border-color">
       <h3 class="mt0 mb2">
         <a href="{{ post.url | relative_url }}">
@@ -25,3 +29,18 @@ layout: default
     </article>
   {% endfor %}
 </section>
+
+{% if paginator %}
+  <div class="dt w-100">
+    {% if paginator.previous_page %}
+      <a class="dtc tc pa3 ba br4 br--left border-color body-color-dark hover-bg" href="{{ paginator.previous_page_path | relative_url }}"><i class="fas fa-chevron-left"></i></a>
+    {% else %}
+      <span class="dtc tc pa3 ba br4 br--left border-color body-color-light"><i class="fas fa-chevron-left"></i></span>
+    {% endif %}
+    {% if paginator.next_page %}
+      <a class="dtc tc pa3 ba br4 br--right border-color body-color-dark hover-bg" href="{{ paginator.next_page_path | relative_url }}"><i class="fas fa-chevron-right"></i></a>
+    {% else %}
+      <span class="dtc tc pa3 ba br4 br--right border-color body-color-light"><i class="fas fa-chevron-right"></i></span>
+    {% endif %}
+  </div>
+{% endif %}
