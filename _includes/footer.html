@@ -9,14 +9,21 @@
   </div>
   {% endif %}
   <div class="dt-l w-100">
-    <p class="dtc-l tl-l">
-      &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>
-      {%- if site.author -%}
-        &nbsp;<a href="{{ site.author.url }}" target="_blank">{{ site.author.name }}</a>
-      {%- endif -%}. All rights reserved.
+    <div class="dtc-l tl-l">
+      <p class="">
+        &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>
+        {%- if site.author -%}
+          &nbsp;<a href="{{ site.author.url }}" target="_blank">{{ site.author.name }}</a>
+        {%- endif -%}. All rights reserved.
+      </p>
+      <p class="">
+        Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> & <a href="https://github.com/vfvong/jekyll-theme-tfg" target="_blank">TFG</a>
+      </p>
+    </div>
+    {% if site.description %}
+    <p class="dtc-l tr-l pl4-l">
+      {{ site.description }}
     </p>
-    <p class="dtc-l tr-l mb0">
-      Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> & <a href="https://github.com/vfvong/jekyll-theme-tfg" target="_blank">TFG</a>
-    </p>
+    {% endif %}
   </div>
 </footer>
