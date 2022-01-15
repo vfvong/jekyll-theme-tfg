@@ -2,6 +2,14 @@
 
 TFG is a tiny friendly giant Jekyll theme for powering blogs. The name of this theme is from [Koenigsegg Gemera](https://www.koenigsegg.com/gemera/)'s engine ["Tiny Friendly Giant"](https://www.koenigsegg.com/gemera/tiny-friendly-giant-engine/). It is small when it comes to emissions and consumption, and at the same time, it is big when it comes to power, torque, and sound. The target of this theme is similar—While providing friendly and powerful blog functions, try to keep the code and the design as tiny as possible.
 
+## Highlight Features
+
+- Light and dark mode, via [`prefers-color-scheme`](https://web.dev/prefers-color-scheme/)
+- [Google Analytics 4](https://analytics.google.com/analytics/web/)
+- [Disqus](https://disqus.com/)
+- [MathJax](https://www.mathjax.org/)
+- [Font Awesome](https://fontawesome.com/)
+
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
@@ -46,6 +54,12 @@ remote_theme: vfvong/jekyll-theme-tfg
 ```
 
 ## Usage
+
+Ease of use is one of the design goals of TFG. Basically, you only need to refer to the [`_config.yml`](https://github.com/vfvong/jekyll-theme-tfg/blob/gh-pages/_config.yml) file of the demo to set the basic parameters required to run the website.
+
+### Customization
+
+You can of course fork the entire repository and make custom changes on your copy, but there is a much cleaner way: after referencing the theme, you just need to copy the [`_sass/tfg/_variables.scss`](https://github.com/vfvong/jekyll-theme-tfg/blob/main/_sass/tfg/_variables.scss) file to your repository in the corresponding path, and then modify some variables, you can customize the color and fonts you like.
 
 ## Contributing
 
