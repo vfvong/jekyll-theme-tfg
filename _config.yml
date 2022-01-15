@@ -1,0 +1,13 @@
+title: TFG
+tagline: A Jekyll theme
+description: TFG is a tiny friendly giant Jekyll theme for powering blogs.
+
+avatar: https://avatars.githubusercontent.com/u/97170774
+author:
+  name: Song-Zi Vong
+  url:  https://twitter.com/vfvong
+
+plugins:
+  - jekyll-paginate
+
+paginate: 2
