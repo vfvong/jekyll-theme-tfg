@@ -4,8 +4,8 @@ TFG is a tiny friendly giant Jekyll theme for powering blogs. The name of this t
 
 Preview the demo.
 
-![Screenshot light](screenshot-light.jpg)
-![Screenshot dark](screenshot-dark.jpg)
+![Screenshot light](screenshot-light.png)
+![Screenshot dark](screenshot-dark.png)
 
 ## Highlight Features
 
