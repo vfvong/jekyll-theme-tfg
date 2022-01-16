@@ -2,6 +2,11 @@
 
 TFG is a tiny friendly giant Jekyll theme for powering blogs. The name of this theme is from [Koenigsegg Gemera](https://www.koenigsegg.com/gemera/)'s engine ["Tiny Friendly Giant"](https://www.koenigsegg.com/gemera/tiny-friendly-giant-engine/). It is small when it comes to emissions and consumption, and at the same time, it is big when it comes to power, torque, and sound. The target of this theme is similar—While providing friendly and powerful blog functions, try to keep the code and the design as tiny as possible.
 
+Preview the demo.
+
+![Screenshot light](screenshot-light.jpg)
+![Screenshot dark](screenshot-dark.jpg)
+
 ## Highlight Features
 
 - Light and dark mode, via [`prefers-color-scheme`](https://web.dev/prefers-color-scheme/)
@@ -60,6 +65,57 @@ Ease of use is one of the design goals of TFG. Basically, you only need to refer
 ### Customization
 
 You can of course fork the entire repository and make custom changes on your copy, but there is a much cleaner way: after referencing the theme, you just need to copy the [`_sass/tfg/_variables.scss`](https://github.com/vfvong/jekyll-theme-tfg/blob/main/_sass/tfg/_variables.scss) file to your repository in the corresponding path, and then modify some variables, you can customize the color and fonts you like.
+
+If you want to put some extra data into the `<head>`, you don't need to overwrite the entire `_includes/head.html` file, and you just need to create a file `_includes/custom-head.html` in your repository, and then put your data into there.
+
+### Google Analytics 4
+
+TFG support the [Google Analytics 4](https://support.google.com/analytics/answer/10089681). To enable it, just set the Measurement ID in the `_config.yml`, for example,
+
+```yml
+google_analytics: G-XXXXXXXXXX
+```
+
+### Disqus
+
+To enable [Disqus](https://disqus.com/), just set the [Disqus shortname](https://help.disqus.com/en/articles/1717111-what-s-a-shortname) in the `_config.yml`, for example,
+
+```yml
+disqus: <your disqus shortname>
+```
+
+### MathJax
+
+TFG relies on the [MathJax](https://www.mathjax.org/) to render math. The MathJax is disabled by default. You need to set `math: true` on the page where you want to enable the MathJax.
+
+### Navigation
+
+The navigation in TFG is very easy to configure, just specify the titles and URLs in the [`_data/navigation.yml`](https://github.com/vfvong/jekyll-theme-tfg/blob/gh-pages/_data/navigation.yml) file, for example,
+
+```yml
+- title: Home
+  url: /
+- title: About
+  url: /about.html
+- title: Archive
+  url: /archive.html
+```
+
+### Social Links
+
+The social links in TFG is also very easy to connfigure. You don't need to import any large SVG file to render the icons because TFG supports the [Font Awesome](https://fontawesome.com/). Specify the titles, URLs, and icons in the [`_data/social.yml`](https://github.com/vfvong/jekyll-theme-tfg/blob/gh-pages/_data/social.yml) file, for example,
+
+```yml
+- title: Email
+  url: mailto:vfvong@gmail.com
+  icon: fas fa-envelope
+- title: Twitter
+  url: https://twitter.com/vfvong
+  icon: fab fa-twitter
+- title: GitHub
+  url: https://github.com/vfvong
+  icon: fab fa-github
+```
 
 ## Contributing
 
