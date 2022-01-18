@@ -2,6 +2,30 @@
  * Some customized classes
  */
 
+/* Display */
+
+.dg {
+  display: grid;
+}
+
+.gc-gap1 {
+  column-gap: 1em;
+}
+
+.gr-gap1 {
+  row-gap: 1em;
+}
+
+.gt-columns2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (min-width: 60em) {
+  .gt-columns3-l {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 /* Text */
 
 .line-through {
