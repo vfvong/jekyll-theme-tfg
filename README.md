@@ -1,4 +1,4 @@
-# Jekyll Theme TFG
+# Jekyll Theme TFG <!-- omit in toc -->
 
 TFG is a tiny friendly giant Jekyll theme for powering blogs. The name of this theme is from [Koenigsegg Gemera](https://www.koenigsegg.com/gemera/)'s engine ["Tiny Friendly Giant"](https://www.koenigsegg.com/gemera/tiny-friendly-giant-engine/). It is small when it comes to emissions and consumption, and at the same time, it is big when it comes to power, torque, and sound. The target of this theme is similar—While providing friendly and powerful blog functions, try to keep the code and the design as tiny as possible.
 
@@ -9,13 +9,29 @@ Preview the [demo](http://vfvong.blog/jekyll-theme-tfg/).
 ![Screenshot light](screenshot-light.png)
 ![Screenshot dark](screenshot-dark.png)
 
-## Highlight Features
+## Highlight Features <!-- omit in toc -->
 
 - Light and dark mode, via [`prefers-color-scheme`](https://web.dev/prefers-color-scheme/)
+- Archive pages implemented in pure [Liquid](https://shopify.github.io/liquid/)
 - [Google Analytics 4](https://analytics.google.com/analytics/web/)
 - [Disqus](https://disqus.com/)
 - [MathJax](https://www.mathjax.org/)
 - [Font Awesome](https://fontawesome.com/)
+
+## Table of Contents <!-- omit in toc -->
+
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Customization](#customization)
+  - [Archive Pages](#archive-pages)
+  - [Google Analytics 4](#google-analytics-4)
+  - [Disqus](#disqus)
+  - [MathJax](#mathjax)
+  - [Navigation](#navigation)
+  - [Social Links](#social-links)
+- [Contributing](#contributing)
+- [Development](#development)
+- [License](#license)
 
 ## Installation
 
@@ -69,6 +85,37 @@ Ease of use is one of the design goals of TFG. Basically, you only need to refer
 You can of course fork the entire repository and make custom changes on your copy, but there is a much cleaner way: after referencing the theme, you just need to copy the [`_sass/tfg/_variables.scss`](https://github.com/vfvong/jekyll-theme-tfg/blob/main/_sass/tfg/_variables.scss) file to your repository in the corresponding path, and then modify some variables, you can customize the color and fonts you like.
 
 If you want to put some extra data into the `<head>`, you don't need to overwrite the entire `_includes/head.html` file, and you just need to create a file `_includes/custom-head.html` in your repository, and then put your data into there.
+
+### Archive Pages
+
+TFG provides a template `archive` to archive posts by years, categories, or tags.
+
+If you want to show an archive page of years, just create a file and put these front matter in it:
+
+```yml
+---
+layout: archive
+type: years
+title: Archive by Years
+---
+```
+
+Similarly, if you want to show an archive page of categories, just create a file and put these front matter in it:
+
+```yml
+---
+layout: archive
+type: categories
+title: Archive by Categories
+---
+```
+
+Besides, if you want the categories and tags displayed in the post to link to the archive pages, you need to configure the paths to the category and tag archive pages in the `_config.yml` file, for example:
+
+```yml
+categories_path: /categories/
+tags_path: /tags/
+```
 
 ### Google Analytics 4
 
