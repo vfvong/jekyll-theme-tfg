@@ -2,9 +2,10 @@
 layout: post
 title: Example Content
 author: [Mark Otto, Song-Zi Vong]
-categories: misc
+categories: [Essays, Examples]
 tags: [example, html]
 math: true
+last_modified_at: 2022-01-19 22:16:28 +0800
 ---
 
 **Howdy!** This is an example blog post that shows several types of HTML content supported in this theme.
