@@ -3,7 +3,18 @@ layout: default
 ---
 
 <article>
-  <h1 class="mb2">{{ page.title }}</h1>
+  {% if page.categories.size > 0 %}
+    <nav class="avenir f6 f5-l body-color-light">
+      {% for category in page.categories %}
+        {% if site.categories_path %}
+          <a class="hover-no-decoration color-inherit hover-darken" href="{{ site.categories_path | relative_url }}#{{ category | slugify }}">{{ category }}</a> /
+        {% else %}
+          <span>{{ category }}</span> /
+        {% endif %}
+      {% endfor %}
+    </nav>
+  {% endif %}
+  <h1 class="mv2">{{ page.title }}</h1>
   <div class="avenir mb4 f6 f5-l body-color-light">
     <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
       {{ page.date | date_to_string }}
@@ -24,6 +35,19 @@ layout: default
     {%- endif -%}
   </div>
   {{ content }}
+
+  {% if page.tags.size > 0 %}
+    <nav class="avenir f6 f5-l body-color-light mv2">
+      {% for tag in page.tags %}
+        {% assign slugified_tag = tag | slugify %}
+        {% if site.tags_path %}
+          <a class="hover-no-decoration color-inherit hover-darken" href="{{ site.tags_path | relative_url }}#{{ slugified_tag }}">#{{ slugified_tag }}</a>
+        {% else %}
+          <span>#{{ slugified_tag }}</span>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  {% endif %}
 </article>
 
 <div class="avenir f6 f5-l dt w-100 mv4">
