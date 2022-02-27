@@ -53,11 +53,17 @@ figcaption {
   font-size: .8em;
 }
 
-article img {
-  display: block;
-  max-width: 100%;
-  margin: 1em 0;
-  border-radius: .5em;
+article {
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 1em 0;
+    border-radius: .5em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-fonts);
+  }
 }
 
 table {
