@@ -43,6 +43,10 @@ li {
   ul, ol {
     margin: 0;
   }
+
+  > p {
+    margin-top: 0;
+  }
 }
 
 figure {
